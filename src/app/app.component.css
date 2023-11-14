@@ -1,0 +1,9 @@
+:host {
+    color: white;
+    font-family: Roboto, "Helvetica Neue", system-ui;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
