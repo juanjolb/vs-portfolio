@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-top-bar',
+  selector: 'app-skills',
   standalone: true,
   imports: [CommonModule],
-  template: `<div class="search-item">Juanjo Lozano</div>`,
-  styleUrl: './top-bar.component.css'
+  templateUrl: './skills.component.html',
+  styleUrl: './skills.component.css'
 })
-export class TopBarComponent {
-
+export class SkillsComponent {
 }

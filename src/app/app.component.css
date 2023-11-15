@@ -1,9 +1,42 @@
-:host {
+#app {
     color: white;
     font-family: Roboto, "Helvetica Neue", system-ui;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 100px 400px 1fr;
+    grid-template-rows: 46px 1fr;
+    grid-template-areas: 
+    "top-bar top-bar top-bar"
+    "navigation-bar main main"
 }
 
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+#app.panel-open {
+    grid-template-areas: 
+    "top-bar top-bar top-bar"
+    "navigation-bar side-panel main" !important;
 }
+
+#app .top-bar {
+    grid-area: top-bar;
+    height: 100%;
+    background-color: rgb(107, 113, 125);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+#app .nav-bar {
+    grid-area: nav-bar;
+}
+
+#app .side-panel {
+    grid-area: side-panel;
+    background-color: rgb(107, 113, 125);
+}
+
+
+#app .main {
+    grid-area: main;
+}	
+

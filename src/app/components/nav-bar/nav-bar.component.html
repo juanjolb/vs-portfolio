@@ -1,8 +1,7 @@
-<div class="nav-bar">
+<nav class="nav-bar">
     @for (item of navItems; track $index) {
-        <a href="{{item.route}}" class="nav-item" [class.active]="item.active">
-            {{item.iconPath}}
+        <a (click)="toggleSidePanel($index)" [routerLink]="item.route" class="nav-item" [class.active]="item.active" >
+            <img [src]="item.iconPath" [alt]="item.altText" />
         </a>
     }
-</div>
-
+</nav>

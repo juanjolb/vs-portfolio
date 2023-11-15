@@ -1,12 +1,19 @@
-<section>
-  <app-top-bar></app-top-bar>
-</section>
+<div id="app">
+  <section class="top-bar">
+    <app-top-bar></app-top-bar>
+  </section>
 
-
-<main>
-  <nav>
+  <div class="navigation-bar">
     <app-nav-bar></app-nav-bar>
-  </nav>
-</main>
+  </div>
 
-<router-outlet></router-outlet>
+  @if (showSidePanel) {
+    <section class="side-panel">
+      <app-side-panel></app-side-panel>
+    </section>
+  }
+
+  <main class="main">
+    <p style="color: black;">Main Component</p>
+  </main>
+</div>
